@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#201917">
+  <meta name="description" content="Интерактивный расчет имиджевой интерьерной съемки Villa Plyos.">
+  <title>Villa Plyos — расчет фотосъемки</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23201917'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-size='24' fill='%23bc8f52' font-family='Georgia'%3EVP%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,500;0,600;1,500&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="К началу страницы">
+        <span class="brand-mark" aria-hidden="true">VP</span>
+        <span>
+          <b>Villa Plyos</b>
+          <small>Имиджевый фотобанк</small>
+        </span>
+      </a>
+      <span class="topbar-note">Предварительный расчет · сентябрь 2026</span>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Интерьеры · SPA · ресторан · территория</p>
+          <h1 id="page-title">Фотобанк,<br><span>собранный под задачи объекта</span></h1>
+          <p class="lead">Выберите формат съемки и оставьте только нужные пространства. Итоговая стоимость, объем материала и ориентировочный график пересчитаются автоматически.</p>
+          <div class="scope-note">
+            <span>Общие планы</span><span>Детали</span><span>Вертикали</span><span>Для сайта + высокое разрешение</span>
+          </div>
+        </div>
+        <aside class="author-card reveal reveal-delay" aria-labelledby="author-title">
+          <p class="author-kicker">Автор съемки</p>
+          <div class="author-copy">
+            <h2 id="author-title">Александр Кузнецов</h2>
+            <p>Я интерьерный фотограф из Москвы, 12 лет в профессии. Снимаю отели, SPA, частные и коммерческие пространства. Собираю серию так, чтобы в ней читались планировка, свет, материалы и характер места.</p>
+          </div>
+          <a class="portfolio-link" href="https://kuznetsovphotographer-prog.github.io/aki/" target="_blank" rel="noopener noreferrer" aria-label="Открыть портфолио Александра Кузнецова в новой вкладке">
+            <span><small>Перейти на сайт</small><strong>Смотреть портфолио</strong></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10"/></svg>
+          </a>
+        </aside>
+      </section>
+
+      <section class="calculator" aria-labelledby="calculator-title">
+        <div class="calculator-head reveal">
+          <div>
+            <p class="eyebrow">Конструктор предложения</p>
+            <h2 id="calculator-title">Выберите пакет и зоны</h2>
+          </div>
+          <div class="package-switch" role="radiogroup" aria-label="Пакет съемки">
+            <button type="button" role="radio" aria-checked="false" data-package="standard">
+              <span>Стандарт</span><small>компактный фотобанк</small>
+            </button>
+            <button class="active" type="button" role="radio" aria-checked="true" data-package="premium">
+              <span>Премиум</span><small>полный фотобанк</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="package-explainer" id="package-explainer">
+          <b>Премиум</b> — расширенный фотобанк по всем выбранным зонам: общие планы, детали, вертикальные и горизонтальные кадры для сайта, соцсетей, презентаций и PR.
+        </div>
+
+        <div class="zones-toolbar">
+          <span><b id="selected-count">12</b> из 12 зон выбрано</span>
+          <button id="select-all" type="button">Снять выбор</button>
+        </div>
+
+        <div class="zones-list" id="zones-list"></div>
+
+        <section class="selection-flow reveal" aria-labelledby="selection-title">
+          <div class="selection-head">
+            <p class="eyebrow">Формат выдачи</p>
+            <h3 id="selection-title">Два комплекта фотографий</h3>
+            <p>Заказчик получает не только финальные кадры с детальной ретушью, но и расширенный отбор фотографий с готовым цветом.</p>
+          </div>
+          <div class="selection-steps">
+            <article>
+              <span class="selection-number">01</span>
+              <strong id="color-selection-total">≈ 280–400</strong>
+              <h4>Фотографии с цветокоррекцией</h4>
+              <p>Расширенный отбор без сложной локальной ретуши: выровнены цвет, экспозиция, баланс белого и общий контраст.</p>
+              <small class="selection-deadline">Готовность — в течение 10 дней</small>
+            </article>
+            <div class="selection-arrow" aria-hidden="true">→</div>
+            <article>
+              <span class="selection-number">02</span>
+              <strong id="retouch-selection-total">≈ 140–160</strong>
+              <h4>Фотографии с детальной ретушью</h4>
+              <p>Клиент выбирает главные кадры. Для них выполняются точная геометрия, сложная сборка света, чистка деталей и ручная ретушь.</p>
+              <small class="selection-deadline">Готовность — в течение 20 дней после выбора</small>
+            </article>
+          </div>
+          <p class="selection-example">Пример: на 10 итоговых кадров с детальной ретушью предоставляется примерно 20–25 фотографий с цветокоррекцией для выбора.</p>
+        </section>
+
+        <section class="logistics-panel reveal" aria-labelledby="logistics-title">
+          <div class="logistics-copy">
+            <p class="eyebrow">Логистика</p>
+            <h3 id="logistics-title">Дорога и проживание</h3>
+            <p>Дорога рассчитывается отдельно: 800 км на автомобиле — 5 000 ₽. Выберите, кто предоставляет проживание на период съемки.</p>
+          </div>
+          <div class="lodging-switch" role="radiogroup" aria-label="Вариант проживания">
+            <button class="active" type="button" role="radio" aria-checked="true" data-lodging="client">
+              <span class="lodging-icon">01</span>
+              <span><b>Проживание предоставляет Villa Plyos</b><small>В калькуляторе — 0 ₽</small></span>
+            </button>
+            <button type="button" role="radio" aria-checked="false" data-lodging="self">
+              <span class="lodging-icon">02</span>
+              <span><b>Проживание подбираю самостоятельно</b><small><span id="night-count">5 ночей</span> × 4 000 ₽</small></span>
+            </button>
+          </div>
+        </section>
+
+        <aside class="summary-card reveal" aria-live="polite">
+          <div class="summary-topline">
+            <div class="summary-intro">
+              <div class="summary-heading">
+                <span>Итоговый расчет</span>
+                <span class="status-dot">актуально</span>
+              </div>
+              <div class="payment-compact" aria-label="Порядок оплаты">
+                <span>Порядок оплаты</span>
+                <strong>Предоплата 20% · <span id="prepayment-total">50 400 ₽</span></strong>
+                <p>Договор фиксирует даты съемки. Оставшиеся 80% оплачиваются после завершения ретуши и передачи готового архива.</p>
+              </div>
+            </div>
+            <div class="total-block">
+              <span>Итого</span>
+              <strong id="grand-total">252 000 ₽</strong>
+            </div>
+          </div>
+          <dl class="summary-grid">
+            <div class="sum-work"><dt>Работа</dt><dd id="work-total">247 000 ₽</dd></div>
+            <div class="sum-road"><dt>Дорога · 800 км</dt><dd id="road-total">5 000 ₽</dd></div>
+            <div class="sum-lodging"><dt>Проживание</dt><dd id="lodging-total">Предоставляет объект</dd></div>
+            <div class="sum-detail"><dt>С детальной ретушью</dt><dd id="photo-total">≈ 140–160</dd></div>
+            <div class="sum-color"><dt>С цветокоррекцией</dt><dd id="color-photo-total">≈ 280–400</dd></div>
+            <div class="sum-days"><dt>Съемка</dt><dd id="day-total">4 дня</dd></div>
+            <div class="sum-color-time"><dt>Отбор и цвет</dt><dd>В течение 10 дней</dd></div>
+            <div class="sum-retouch-time"><dt>Финальная ретушь</dt><dd>В течение 20 дней после выбора</dd></div>
+          </dl>
+          <div class="summary-footer">
+            <p class="summary-footnote">Питание не включено в расчет и согласовывается с заказчиком отдельно.</p>
+            <div class="summary-actions">
+              <button class="copy-button" id="copy-button" type="button">
+                <span>Скопировать расчет</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2M6 7h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z"/></svg>
+              </button>
+              <div class="discount-line" id="discount-line">
+                <span>Пакетная скидка</span><b id="discount-value">−16 000 ₽</b>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="schedule reveal" aria-labelledby="schedule-title">
+        <div class="schedule-head">
+          <div>
+            <p class="eyebrow">План на объекте</p>
+            <h2 id="schedule-title">Расписание съемки</h2>
+          </div>
+          <p>Последовательность учитывает дневной свет, режим работы гостевых зон и отдельное погодное окно для территории.</p>
+        </div>
+        <div class="schedule-grid" id="schedule-grid"></div>
+        <p class="schedule-note">График предварительный. Перед съемкой фиксируем доступ к помещениям, время закрытия зон для гостей и резервное погодное окно.</p>
+      </section>
+
+      <section class="conditions reveal" aria-labelledby="conditions-title">
+        <div class="conditions-head">
+          <p class="eyebrow">В стоимость входит</p>
+          <h2 id="conditions-title">От подготовки до готового архива</h2>
+          <p>Полный цикл производства фотобанка — от согласования ракурсов до структурированной передачи материала.</p>
+        </div>
+        <div class="conditions-grid">
+          <article><span>01</span><strong>Подготовка и планирование</strong><p>Бриф, список обязательных ракурсов, график по дневному свету и координация доступа к помещениям.</p></article>
+          <article><span>02</span><strong>Съемка на объекте</strong><p>Камеры, профессиональная оптика и свет, работа с композицией и аккуратная подготовка пространства перед кадром.</p></article>
+          <article><span>03</span><strong>Цветокоррекция расширенного отбора</strong><p>Заказчик получает увеличенную серию без сложной локальной ретуши, но с готовыми цветом, экспозицией, балансом белого и контрастом.</p></article>
+          <article><span>04</span><strong>Выбор, ретушь и два архива</strong><p>Клиент отмечает главные кадры для детальной ручной обработки и получает оба комплекта в полном и web-размере.</p></article>
+        </div>
+        <div class="delivery">
+          <span>Отбор и цветокоррекция — в течение 10 дней</span>
+          <span>Финальная ретушь выбранных кадров — в течение 20 дней после выбора</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Предварительное коммерческое предложение</span>
+      <span>Расчет уточняется после получения плана SPA и ведомости номеров</span>
+    </footer>
+  </div>
+
+  <template id="zone-template">
+    <article class="zone-card">
+      <label class="zone-check">
+        <input type="checkbox" checked>
+        <span class="custom-check" aria-hidden="true"></span>
+        <span class="zone-main">
+          <span class="zone-kicker"></span>
+          <strong class="zone-name"></strong>
+          <small class="zone-detail"></small>
+        </span>
+        <span class="zone-result">
+          <span class="zone-photos"></span>
+          <span class="zone-color-photos"></span>
+          <b class="zone-price"></b>
+        </span>
+      </label>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
